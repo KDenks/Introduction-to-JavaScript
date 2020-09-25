@@ -5,6 +5,9 @@ let votingAge = 23;
 
 if(votingAge > 18){
     console.log("true")
+}
+else{
+    console.log("false")
 };
 
 
@@ -160,12 +163,12 @@ console.log(Centimeter + " CM");
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 function annoyingSong() {  
-    var soda; //differnt every time
-    var sodaBottlesLeft; //differnt every time
-    for (i = 99; i >= 1; i--) { //i is set to 99(starts at 99 subtarts (-1)intel 1 )
-      if (i == 1) { //stoppping condition for i =1
+    var soda; 
+    var sodaBottlesLeft; 
+    for (i = 99; i >= 1; i--) )
+      if (i == 1) 
         soda = "bottle";
-        sodaBottlesLeft = "No bottles of soda on the wall!";// only when i - 0
+        sodaBottlesLeft = "No bottles of soda on the wall!";
       } else {
         soda = "bottles";
         sodaBottlesLeft = i - 1 + " bottles of soda on the wall!";
@@ -204,7 +207,7 @@ console.log("C");
 if(score <=69 && score >= 60) {
 console.log("D");
 }
-if(score < 60) {
+else {
 console.log("F");
 }
 
