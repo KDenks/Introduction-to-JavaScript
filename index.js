@@ -1,32 +1,54 @@
 /************************************************************** Task 1: Warm-up! **************************************************************/
 //Task a: declare a variable called votingAge, console log true if age > 18 (no function required)
 
+let votingAge = 23;
 
+if(votingAge > 18){
+    console.log("true")
+};
 
 
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
+let firstVar = 18
 
+let secondVar = 25
 
+if(secondVar > firstVar){
+    let secondVar = firstVar
+    console.log(secondVar)
+};
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
-
+console.log(Number('1999'));
 
 
 
 //Task d: Write a function to multiply a*b 
 
+function multiply(a,b){
+    return a * b;
+}
 
-
+let y  = multiply(7,7);
+console.log(y);
 
 
 /************************************************************** Task 2 **************************************************************/
 //Age in Dog years
 //write a function that takes your age and returns it to you in dog years - they say that 1 human year is equal to seven dog years 
 
+let age = 27
+let dogYearMultiply = 7
+
+function dogYears(age, dogYearMultiply){
+    return age * dogYearMultiply
+}
+
+console.log(dogYears(age, dogYearMultiply));
 
 
 
@@ -50,6 +72,26 @@
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
   
 
+function dogFood(age, weight){
+
+    if(age >= 1 && weight <= 5){
+      console.log(weight * .05);
+    } else if(age >= 1 && (weight >= 6 && weight <= 10)){
+      console.log(weight * .04);
+    } else if(age >= 1 && (weight >= 11 && weight <= 15)){
+      console.log(weight * .03);
+    } else if(age >= 1 && (weight > 15)){
+      console.log(weight * .02);
+    } else if(age >= .16666667 && age <= .33333333 ){
+      console.log(weight * .10);
+    } else if(age >= .33333333 && age <= .58333333){
+      console.log(weight * .05);
+    } else if(age >= .58333333 && age < 1){
+      console.log(weight * .04);
+    }
+}
+
+    dogFood(1, 15);
 
 
 
@@ -60,7 +102,36 @@
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-  
+let userChoice = prompt('please type one of rock, paper or scissors in the text box');
+
+userChoice = userChoice.toLowerCase();
+
+let choices = ['paper', 'rock', 'scissors'];
+
+let randomNumber = Math.floor(Math.random() * 3);
+
+let computerChoice = choices[randomNumber];
+
+console.log(`Your choice is ${userChoice}, the computer's choice is ${computerChoice}.`);
+
+if (userChoice === computerChoice){
+  console.log("Draw!");
+  }else if (userChoice === 'paper' && computerChoice === 'rock'){
+  console.log("User Wins!");
+  }else if (userChoice === 'rock' && computerChoice === 'scissors'){
+  console.log("User win!");
+  }else if (userChoice === 'scissors' && computerChoice === 'rock'){
+  console.log("User loses!");
+  }else if (userChoice === 'rock' && computerChoice === 'paper'){
+  console.log("User loses!");
+  }else if (userChoice === 'paper' && computerChoice === 'scissors'){
+  console.log("User loses!");
+  }else if (userChoice === 'scissors' || computerChoice === 'paper'){
+  console.log("User wins!");
+  }else{
+  console.log("Please enter a different solution.");
+  }
+
   
 
 /************************************************************** Task 5 **************************************************************/
@@ -111,7 +182,6 @@
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
-
 
 
 
