@@ -139,12 +139,18 @@ if (userChoice === computerChoice){
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
 
 
+var kilo = parseInt(prompt("Please enter kilometers:"));
+var miles = kilo / 1.6;
+console.log(miles + " Miles");
+
 
 
 
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
   
-
+var feet = parseInt(prompt("Enter feet:"));
+var Centimeter  = feet / 0.0328084;
+console.log(Centimeter + " CM");
 
 
 
@@ -153,8 +159,26 @@ if (userChoice === computerChoice){
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
-
-
+function annoyingSong() {  
+    var soda; //differnt every time
+    var sodaBottlesLeft; //differnt every time
+    for (i = 99; i >= 1; i--) { //i is set to 99(starts at 99 subtarts (-1)intel 1 )
+      if (i == 1) { //stoppping condition for i =1
+        soda = "bottle";
+        sodaBottlesLeft = "No bottles of soda on the wall!";// only when i - 0
+      } else {
+        soda = "bottles";
+        sodaBottlesLeft = i - 1 + " bottles of soda on the wall!";
+      } 
+      console.log(i+ " " + soda + " of soda on the wall,");
+      console.log(i+ " " + soda + " of soda,");
+      console.log("Take one down, pass it around,");
+      console.log(sodaBottlesLeft);
+    }
+  
+  }
+  console.log(annoyingSong());
+  
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -166,6 +190,23 @@ if (userChoice === computerChoice){
 //60s should be D 
 //and anything below 60 should be F
   
+var score = prompt("What is your score?");
+
+if(score >= 90) {
+console.log("A");
+}
+if(score <= 89 && score >= 80) {
+console.log("B");
+}
+if(score <= 79 && score >= 70) {
+console.log("C");
+}
+if(score <=69 && score >= 60) {
+console.log("D");
+}
+if(score < 60) {
+console.log("F");
+}
 
   
   
