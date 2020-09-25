@@ -169,10 +169,13 @@ function annoyingSong() {
       if (i == 1) 
         soda = "bottle";
         sodaBottlesLeft = "No bottles of soda on the wall!";
-      } else {
+      } 
+      
+      else {
         soda = "bottles";
         sodaBottlesLeft = i - 1 + " bottles of soda on the wall!";
       } 
+
       console.log(i+ " " + soda + " of soda on the wall,");
       console.log(i+ " " + soda + " of soda,");
       console.log("Take one down, pass it around,");
